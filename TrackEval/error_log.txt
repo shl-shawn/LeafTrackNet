@@ -1,0 +1,977 @@
+MotChallenge2DBox
+
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 210, in _load_raw_file
+    raw_data = {key: [None] * num_timesteps for key in data_keys}
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 210, in <dictcomp>
+    raw_data = {key: [None] * num_timesteps for key in data_keys}
+TypeError: can't multiply sequence by non-int of type 'dict'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+TypeError: can't multiply sequence by non-int of type 'dict'
+
+
+
+
+
+MotChallenge2DBox
+557-00007.txt
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 152, in _load_simple_text_file
+    fp = open(file)
+NotADirectoryError: [Errno 20] Not a directory: '/mnt/beegfs/home/liu15/BASF/MOTRv2/output/run3_prediction_txt/val/557-00007.txt/run3_prediction_txt/560-00010.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 93, in get_raw_seq_data
+    raw_tracker_data = self._load_raw_file(tracker, seq, is_gt=False)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 216, in _load_raw_file
+    read_data, ignore_data = self._load_simple_text_file(file, is_zipped=self.data_is_zipped, zip_file=zip_file)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 211, in _load_simple_text_file
+    file))
+trackeval.utils.TrackEvalException: File 560-00010.txt cannot be read because it is either not present or invalidly formatted
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: File 560-00010.txt cannot be read because it is either not present or invalidly formatted
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 242, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 234, in _load_raw_file
+    raise TrackEvalException(
+trackeval.utils.TrackEvalException: Ground-truth data contains the following invalid timesteps in seq Is-1_rep_04: 32, , 33, , 34, , 35, , 36, , 37, , 38, , 39, , 40, , 41, , 42, , 43, , 44, , 45, , 46, , 47, , 48, , 49, , 50, , 51, , 52, , 53, , 54, , 55, , 56, , 57, , 58, , 59, , 60, , 61, , 62, , 63, , 64, , 65, , 66, , 67, , 68, , 69, , 70, , 71, , 72, , 73, , 74, , 75, , 76, , 77, 
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Ground-truth data contains the following invalid timesteps in seq Is-1_rep_04: 32, , 33, , 34, , 35, , 36, , 37, , 38, , 39, , 40, , 41, , 42, , 43, , 44, , 45, , 46, , 47, , 48, , 49, , 50, , 51, , 52, , 53, , 54, , 55, , 56, , 57, , 58, , 59, , 60, , 61, , 62, , 63, , 64, , 65, , 66, , 67, , 68, , 69, , 70, , 71, , 72, , 73, , 74, , 75, , 76, , 77, 
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 258, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 258, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 258, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_09, frame: 38, ids: -1)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu15/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu15/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_09, frame: 38, ids: -1)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_39, frame: 2, ids: 5)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_39, frame: 2, ids: 5)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_42, frame: 3, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_42, frame: 3, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_39, frame: 2, ids: 5)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_39, frame: 2, ids: 5)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_42, frame: 3, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Uk-1_rep_42, frame: 3, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/share/modules/anaconda3/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/modules/anaconda3/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+           ^^^^^^^^^^^^^^
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+           ^^^^^^^^^^^^^^
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+                                                      ^^^^^^^^
+  File "/usr/share/modules/anaconda3/lib/python3.11/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/modules/anaconda3/lib/python3.11/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/modules/anaconda3/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 352, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_42, frame: 7, ids: 1)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/motrv2/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: Cvi-0_rep_42, frame: 7, ids: 1)
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+val
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/BASF/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/yolov10/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+tracks
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 218, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 257, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/mnt/beegfs/home/liu21/.local/lib/python3.10/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+tracks
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 222, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 388, in get_preprocessed_seq_data
+    to_remove_tracker = np.array([], np.int)
+  File "/mnt/beegfs/home/liu21/.local/lib/python3.10/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+tracks
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 224, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/metrics/hota.py", line 31, in eval_sequence
+    res[field] = np.zeros((len(self.array_labels)), dtype=np.float)
+  File "/mnt/beegfs/home/liu21/.local/lib/python3.10/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+tracks
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 224, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/metrics/identity.py", line 83, in eval_sequence
+    res['IDFN'] = fn_mat[match_rows, match_cols].sum().astype(np.int)
+  File "/mnt/beegfs/home/liu21/.local/lib/python3.10/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/liu21/LeafTrackNet/TrackEval/trackeval/eval.py", line 102, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/mnt/beegfs/home/liu21/.conda/envs/leaftracknet/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
