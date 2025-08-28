@@ -10,7 +10,6 @@ This repository provides an official implementation of **LeafTrackNet** for leaf
            alt="LeafTrackNet demo: consistent leaf IDs over time"
            width="100%">
     </td>
-    <td width="10%"></td> <!-- spacer -->
     <td align="center" width="45%">
       <img src="assets/radar_results.png"
            alt="Benchmark radar on CanolaTrack"
@@ -19,7 +18,6 @@ This repository provides an official implementation of **LeafTrackNet** for leaf
   </tr>
   <tr>
     <td align="center"><em>Demo: stable per-leaf tracking under plant-specific challenges.</em></td>
-    <td></td>
     <td align="center"><em>Benchmark: SOTA across HOTA/DetA/AssA/IDF1/MOTA.</em></td>
   </tr>
 </table>
@@ -80,7 +78,7 @@ data/
 ## Training 
 You may use the following command for training LeafTrackNet on single or multiple GPUs:
 
-```python
+```bash
 # single GPU
 python train.py --config configs/default.yaml \
   --train_root data/train --output_dir outputs/leaf_reid --backbone mobilenet_v3
@@ -93,7 +91,7 @@ torchrun --nproc_per_node {NUM_GPUS} train.py \
 
 ## Inference / tracking on CanolaTrack Test Set
 The trained LeafTrackNet model weights can be downloaded from the [link](https://huggingface.co/datasets/shl-shawn/CanolaTrack/tree/main/weights).
-```python
+```bash
 python infer.py --checkpoint_path {TRAINED_WEIGHT} \
   --config configs/default.yaml \
   --proposals_json data/proposals/det_db_val.json \
