@@ -1,0 +1,42 @@
+seed: 42
+
+
+# Data
+train_root: "data/train" # MOT-style: {plant}/gt/gt.txt and {plant}/img/{frame}.jpg
+image_ext: ".jpg"
+
+
+# Model
+backbone: "mobilenet_v3" # [resnet18/34/50/101, mobilenet_v3, vit]
+embed_dim: 128
+
+
+# Training
+batch_size: 48
+epochs: 80
+lr: 1.0e-4
+weight_decay: 1.0e-5
+num_workers: 8
+save_period: 20
+amp: true
+
+
+# Triplet dataset variant
+triplet_strategy: "v2" # [v1, v2, v3]
+window_size: 20 # only for v3
+
+
+# Checkpoints / output
+output_dir: "outputs/leaf_reid"
+
+
+# Inference / tracking
+threshold: 0.4
+max_age: 5
+update_mode: "mean" # [mean, ema]
+alpha: 0.5 # only for ema
+
+
+# Proposals JSON used in inference
+proposals_json: "data/proposals/det_db_val.json"
+image_root: "data/val" # Root that contains {plant}/img
