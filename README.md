@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 **CanolaTrack**
 
-- **Dataset:** [CanolaTrack <sup>©</sup> BASF SE](https://huggingface.co/datasets/shl-shawn/CanolaTrack/tree/main/CanolaTrack)  
+- **Dataset:** [CanolaTrack <sup>©</sup> BASF SE](https://huggingface.co/datasets/shl-shawn/CanolaTrack)  
 - **Precomputed proposals (YOLOv10):** [Proposals JSONs](https://huggingface.co/datasets/shl-shawn/CanolaTrack/tree/main/proposals)  
 - *(Optional)* **YOLOv10 detector weights:** [Detector weights](https://huggingface.co/datasets/shl-shawn/CanolaTrack/tree/main/weights)
 
