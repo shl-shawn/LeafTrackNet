@@ -113,7 +113,14 @@ Benchmark Results:
 ## Citing
 Please cite as followed if you use **CanolaTrack** dataset or **LeafTrackNet** framework.
 ```bibtex
-@article{leaftracknet2025,
-  title={LeafTrackNet: A Deep Learning Framework for Robust Leaf Tracking in Top-Down Plant Phenotyping},
-  year={2025},
+@article{leaftracknet2027,
+title = {LeafTrackNet: A deep learning framework for robust leaf tracking in top-down plant phenotyping},
+journal = {Computers and Electronics in Agriculture},
+volume = {256},
+pages = {112417},
+year = {2027},
+issn = {0168-1699},
+doi = {https://doi.org/10.1016/j.compag.2026.112417},
+url = {https://www.sciencedirect.com/science/article/pii/S016816992601015X},
+author = {Shanghua Liu and Majharulislam Babor and Christoph Verduyn and Breght Vandenberghe and Bruno Betoni Parodi and Cornelia Weltzien and Marina M.-C. Höhne},
 }
