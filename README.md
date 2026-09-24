@@ -1,4 +1,4 @@
-# LeafTrackNet
+# LeafTrackNet _[[paper](https://www.sciencedirect.com/science/article/pii/S016816992601015X)]_
 
 This repository provides an official implementation of **LeafTrackNet** for leaf-level multi-object tracking (MOT) from top-down plant imagery.
 
